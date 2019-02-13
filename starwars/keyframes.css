@@ -1,0 +1,33 @@
+.logo {
+	animation-name: logo-reveal; 
+	animation-duration: 10s; 
+	animation-timing-function: linear; 
+	opacity: 0; 
+	height: 50em; 
+	transform:perspective(1000px) rotateX(0deg);
+}
+
+.intro {
+	transform-origin: 50% 100%; 
+	transform:perspective(350px) rotateX(25deg) scale(2.5); 
+}
+
+.text {
+	animation-name: intro-text; 
+	animation-duration: 1500s; 
+	animation-timing-function: linear; 
+	animation-delay: 7s; 
+}
+
+@keyframes intro-text {
+	0% { top: 100%; opacity: 1; }
+	4% { opacity: 1; }
+	5% { opacity: 0; }
+	100% { top: -200%;}
+}
+
+@keyframes logo-reveal {
+	0% { transform:perspective(500px) translateZ(100px); opacity: 1; }
+	75% { opacity: 1; }
+	100% { transform:perspective(500px) translateZ(-7000px); opacity: 0; }
+}
